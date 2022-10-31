@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
+import { useAppDispatch } from "./app/hooks";
+import List from "./components/list";
+import task from "./data/tasks";
+import { loadTaskActionCreator } from "./redux/features/listSlice";
 
 function App() {
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(loadTaskActionCreator(task));
+  }, [dispatch]);
   return (
     <div className="App">
       <header className="App-header">
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <List />
         <span>
           <span>Learn </span>
           <a
