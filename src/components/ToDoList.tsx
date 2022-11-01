@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import ListStyled from "./ListStyled";
 import { removeTaskActionCreator } from "../redux/features/listSlice";
 

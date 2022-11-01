@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { useAppDispatch } from "./app/hooks";
+import { useAppDispatch } from "./redux/hooks";
 import ToDoList from "./components/ToDoList";
 import task from "./data/tasks";
 import { loadTaskActionCreator } from "./redux/features/listSlice";
