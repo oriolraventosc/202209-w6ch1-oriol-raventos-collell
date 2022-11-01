@@ -7,7 +7,7 @@ interface TasksState {
   tasks: types[];
 }
 
-const taskInitialState: TasksState = {
+export const taskInitialState: TasksState = {
   tasks: task,
 };
 
@@ -21,9 +21,7 @@ const tasksListSlice = createSlice({
     }),
     removeTask: (state, action: PayloadAction<number>): TasksState => ({
       ...state,
-      tasks: [
-        ...taskInitialState.tasks.filter((task) => task.id !== action.payload),
-      ],
+      tasks: [...state.tasks.filter((task) => task.id !== action.payload)],
     }),
   },
 });
