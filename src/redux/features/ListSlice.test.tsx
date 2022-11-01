@@ -56,7 +56,7 @@ describe("Given a tasksListReducer", () => {
   });
 
   describe("When it is invoked with a removeAction", () => {
-    test("Then it should show an array with the elementis with id 0 and 2", () => {
+    test("Then it should show a list with the elementis with id 0 and 2", () => {
       const removetasks = removeTaskActionCreator(1);
       const expectState: TasksState = {
         tasks: [
