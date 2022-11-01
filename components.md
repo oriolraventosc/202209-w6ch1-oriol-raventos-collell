@@ -26,9 +26,7 @@
 
 ### Show data
 
-#### A list of tasks
-
-#### A button with a text "Delete task"
+#### A lists of tasks
 
 ## Form
 
