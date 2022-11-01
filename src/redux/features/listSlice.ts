@@ -1,21 +1,20 @@
 import types from "../../types";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import task from "../../data/tasks";
 
 interface TasksState {
   tasks: types[];
 }
 
 export const taskInitialState: TasksState = {
-  tasks: task,
+  tasks: [],
 };
 
 const tasksListSlice = createSlice({
   name: "tasks",
   initialState: taskInitialState,
   reducers: {
-    addNewTask: (state, action: PayloadAction<types[]>): TasksState => ({
+    loadTasks: (state, action: PayloadAction<types[]>): TasksState => ({
       ...state,
       tasks: [...action.payload],
     }),
@@ -29,6 +28,6 @@ const tasksListSlice = createSlice({
 export const tasksListReducer = tasksListSlice.reducer;
 
 export const {
-  addNewTask: loadTaskActionCreator,
+  loadTasks: loadTaskActionCreator,
   removeTask: removeTaskActionCreator,
 } = tasksListSlice.actions;
