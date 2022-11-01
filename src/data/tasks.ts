@@ -3,12 +3,12 @@ import types from "../types";
 const task: types[] = [
   {
     id: 0,
-    name: "Learn how redux toolkit works",
+    name: "Sleep 1h per day",
     done: false,
   },
   {
     id: 1,
-    name: "Finish the challenge before 4am",
+    name: "Review header pull request",
     done: false,
   },
   {
