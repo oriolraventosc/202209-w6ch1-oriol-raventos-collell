@@ -1,7 +1,7 @@
 import ToDoList from "./ToDoList";
 import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { store } from "../app/store";
+import { store } from "../redux/store";
 
 describe("Given a List component", () => {
   describe("When it is rendered", () => {
