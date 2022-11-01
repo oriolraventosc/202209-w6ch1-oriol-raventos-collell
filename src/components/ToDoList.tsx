@@ -1,6 +1,5 @@
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import { useAppSelector } from "../redux/hooks";
 import ListStyled from "./ListStyled";
-import { removeTaskActionCreator } from "../redux/features/listSlice";
 import useAPI from "../hooks/useAPI";
 import { useEffect } from "react";
 
@@ -8,12 +7,11 @@ const ToDoList = (): JSX.Element => {
   const taskListMethods = useAppSelector(
     ({ taskListMethods }) => taskListMethods.tasks
   );
-  const { loadTasks } = useAPI();
+  const { loadTasks, removeTask } = useAPI();
   useEffect(() => {
     loadTasks();
   }, [loadTasks]);
 
-  const dispatch = useAppDispatch();
   return (
     <ListStyled>
       <ul aria-label="task" className="list">
@@ -22,7 +20,7 @@ const ToDoList = (): JSX.Element => {
             <li key={index}>{task.name}</li>
             <button
               className="list__button"
-              onClick={() => dispatch(removeTaskActionCreator(task.id))}
+              onClick={() => removeTask(task.id)}
             >
               Delete
             </button>
