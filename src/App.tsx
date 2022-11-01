@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import { useAppDispatch } from "./app/hooks";
-import List from "./components/list";
+import ToDoList from "./components/ToDoList";
 import task from "./data/tasks";
 import { loadTaskActionCreator } from "./redux/features/listSlice";
 
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <h1>To do App</h1>
-      <List />
+      <ToDoList />
     </div>
   );
 }

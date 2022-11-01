@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "../app/hooks";
 import ListStyled from "./ListStyled";
 import { removeTaskActionCreator } from "../redux/features/listSlice";
 
-const List = (): JSX.Element => {
+const ToDoList = (): JSX.Element => {
   const taskListMethods = useAppSelector(
     ({ taskListMethods }) => taskListMethods.tasks
   );
@@ -27,4 +27,4 @@ const List = (): JSX.Element => {
   );
 };
 
-export default List;
+export default ToDoList;
