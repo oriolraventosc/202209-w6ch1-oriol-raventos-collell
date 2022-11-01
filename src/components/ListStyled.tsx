@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ListStyled = styled.div`
-  ul {
+  .list {
     padding-inline-start: 0;
     display: flex;
     flex-direction: column;
@@ -51,6 +51,7 @@ const ListStyled = styled.div`
     max-width: 500px;
     width: 100%;
     padding-bottom: 10px;
+    padding-inline-start: 0;
   }
 
   @media (max-width: 645px) {

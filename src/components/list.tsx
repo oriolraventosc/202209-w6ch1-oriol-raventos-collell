@@ -10,9 +10,9 @@ const List = (): JSX.Element => {
   const dispatch = useAppDispatch();
   return (
     <ListStyled>
-      <ul aria-label="task" className="list__item">
+      <ul aria-label="task" className="list">
         {taskListMethods.map((task, index) => (
-          <div className="list-container" key={index}>
+          <ul className="list-container" key={index}>
             <li key={index}>{task.name}</li>
             <button
               className="list__button"
@@ -20,7 +20,7 @@ const List = (): JSX.Element => {
             >
               Delete
             </button>
-          </div>
+          </ul>
         ))}
       </ul>
     </ListStyled>
