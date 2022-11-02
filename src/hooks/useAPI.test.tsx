@@ -19,7 +19,7 @@ describe("Given a function useAPI", () => {
   });
 
   describe("When removeTask is called", () => {
-    test("Then it should introduce an empty list", async () => {
+    test("Then it should introduce a list with two tasks", async () => {
       const expectedAction = dispatch(removeTaskActionCreator(1));
 
       await removeTask(1);
