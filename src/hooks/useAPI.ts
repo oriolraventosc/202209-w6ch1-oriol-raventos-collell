@@ -3,7 +3,7 @@ import types from "../types";
 import {
   loadTaskActionCreator,
   removeTaskActionCreator,
-} from "../redux/features/listSlice";
+} from "../redux/features/ListSlice/listSlice";
 import { useCallback } from "react";
 
 const useAPI = () => {

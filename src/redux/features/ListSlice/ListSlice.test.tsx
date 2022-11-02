@@ -5,7 +5,7 @@ import {
   removeTaskActionCreator,
   TasksState,
 } from "./listSlice";
-import mockTasksList from "../../mocks/mockTasksList";
+import mockTasksList from "../../../mocks/mockTasksList";
 
 describe("Given a tasksListReducer", () => {
   const currentState: TasksState = {
