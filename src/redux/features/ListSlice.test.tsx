@@ -5,7 +5,7 @@ import {
   removeTaskActionCreator,
   TasksState,
 } from "./listSlice";
-import task from "../../data/tasks";
+import mockTasksList from "../../mocks/mockTasksList";
 
 describe("Given a tasksListReducer", () => {
   const currentState: TasksState = {
@@ -29,7 +29,7 @@ describe("Given a tasksListReducer", () => {
   };
   describe("When it is invoked with a loadAction with 3 tasks", () => {
     test("Then it should print a list with 3 tasks", () => {
-      const loadTasks = loadTaskActionCreator(task);
+      const loadTasks = loadTaskActionCreator(mockTasksList);
       const initialState = taskInitialState;
       const expectState: TasksState = {
         tasks: [
@@ -79,7 +79,7 @@ describe("Given a tasksListReducer", () => {
 
   describe("When it is invoked with an unknown action", () => {
     test("Then it should show an empty array", () => {
-      let unknownAction = { type: undefined };
+      let unknownAction = { type: "unknown" };
       const initialState = taskInitialState;
 
       const expectState = {

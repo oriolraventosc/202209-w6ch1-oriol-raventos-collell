@@ -1,6 +1,6 @@
 import types from "../types";
 
-const task: types[] = [
+const mockTasksList: types[] = [
   {
     id: 0,
     name: "Sleep 1h per day",
@@ -18,4 +18,4 @@ const task: types[] = [
   },
 ];
 
-export default task;
+export default mockTasksList;
