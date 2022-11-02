@@ -14,7 +14,6 @@ describe("Given a function useAPI", () => {
       const expectedAction = dispatch(loadTaskActionCreator(mockTasksList));
 
       await loadTasks();
-      debugger;
       expect(expectedAction).toHaveBeenCalled();
     });
   });
@@ -24,7 +23,6 @@ describe("Given a function useAPI", () => {
       const expectedAction = dispatch(removeTaskActionCreator(1));
 
       await removeTask(1);
-      debugger;
       expect(expectedAction).toHaveBeenCalled();
     });
   });
